@@ -1,0 +1,39 @@
+{% extends "plantilla_nav.html" %}
+{% load static %}
+{% block css %}
+        <link rel="stylesheet" href="{% static 'css//estilos_index.css' %}" />
+{% endblock css %}
+
+
+{% block contenido %}
+
+<center>
+    <div>
+        <br>
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <div  class="from" style="background-color: azure;margin: 10px;border-radius: 10px;">
+        <br>
+        <div class="from" style="background-color:rgb(123, 92, 123);margin: 20px;border-radius: 10px; ">
+            <br>
+            <div class="from">
+                <br>
+                {% for item in galeria %}
+                    <img src="{{item.foto.url}}" height="400px" width="400px" alt="">
+                {% endfor %}
+                <br>
+            </div>
+            <br>
+        </div>
+        <br>
+    </div>
+</center>
+
+{% endblock contenido %}
+
+{% block js %}
+
+{% endblock js %}

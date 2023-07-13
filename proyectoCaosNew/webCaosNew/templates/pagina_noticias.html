@@ -1,0 +1,59 @@
+{% extends "plantilla_nav.html" %}
+{% load static %}
+
+{% block css %}
+
+<link rel="stylesheet" href="{% static 'css/estilos_pag_noticia.css' %}" />
+<title>noticias</title>
+{% endblock css %}
+
+
+{% block contenido %}
+<!--noticia-->
+    <div class="noticia">
+      <div class="color_fondo2">
+        <div class="clearfix">
+          <div class="imagen">
+            <img
+              src="{{noticia.foto.url}}"
+              class="col-md-6 float-md-end mb-3 ms-md-3"
+              alt="..."
+            />
+          </div>
+
+          <h1 class="titulo">
+           {{noticia.titulo_noticia}}
+          </h1>
+
+
+
+          <h3 class="titular">
+            {{noticia.titular_noticia}}
+          </h3>
+
+          <p class="cuerpo">
+            {{noticia.cuerpo_noticia}}
+          </p>
+
+          <div>
+             <div class="buton">
+                <a href="{% url 'GALERY' noticia.idnoticia %}">VER GALERIA</a>
+
+              </div>
+
+          </div>
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+{% endblock contenido %}
+
+
+
+{% block js %}
+{% endblock js %}
